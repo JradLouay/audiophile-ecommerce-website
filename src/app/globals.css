@@ -2,32 +2,136 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+h1 {
+  /* font-family: Manrope; */
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 58px; /* 103.571% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px; /* 110% */
+  letter-spacing: 1.429px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 112.5% */
+  letter-spacing: 1.143px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.714px;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.286px;
+  text-transform: uppercase;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .container {
+    margin: 0 auto;
+    max-width: 1110px;
+  }
+
+  .overline {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px; /* 192.308% */
+    letter-spacing: 0.929px;
+    text-transform: uppercase;
+  }
+
+  .body {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; /* 166.667% */
+  }
+
+  .link {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px; /* 192.308% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  @media (max-width: 1110px) {
+    .container {
+      padding-inline: 40px;
+    }
+  }
+  @media (max-width: 768px) {
+    .container {
+      padding-inline: 24px;
+    }
   }
 }
