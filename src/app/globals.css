@@ -85,6 +85,15 @@ h6 {
   text-transform: uppercase;
 }
 
+button {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 @layer utilities {
   .container {
     margin: 0 auto;
