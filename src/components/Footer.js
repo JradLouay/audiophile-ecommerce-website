@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="bg-stone-950">
       <div className="container pb-[38px] md:pb-[46px] lg:pb-12">
-        <div className="w-[101px] h-1 bg-orange-400" />
+        <div className="w-[101px] h-1 bg-[#D87D4A]" />
         <div className="flex items-center md:items-start justify-between bg-stone-950 mt-12 md:mt-[56px] lg:mt-[71px] mb-12 md:mb-9 flex-col gap-y-12 md:gap-y-8 lg:flex-row">
           <Image
             width={143}
@@ -15,10 +15,18 @@ function Footer() {
           />
 
           <div className="flex gap-4 md:gap-[34px] text-center md:text-start flex-col md:flex-row link text-white">
-            <Link href={""}>HOME</Link>
-            <Link href={""}>HEADPHONES</Link>
-            <Link href={""}>SPEAKERS</Link>
-            <Link href={""}>EARPHONES</Link>
+            <Link className="hover:text-[#D87D4A]" href={""}>
+              HOME
+            </Link>
+            <Link className="hover:text-[#D87D4A]" href={""}>
+              HEADPHONES
+            </Link>
+            <Link className="hover:text-[#D87D4A]" href={""}>
+              SPEAKERS
+            </Link>
+            <Link className="hover:text-[#D87D4A]" href={""}>
+              EARPHONES
+            </Link>
           </div>
         </div>
         <div className="grid md:grid-cols-2 text-white gap-y-12 md:gap-y-14">
@@ -38,6 +46,7 @@ function Footer() {
           <div className="md:col-start-2 lg:pb-[7px] flex justify-center md:items-end md:justify-end">
             <div className="flex gap-4">
               <Image
+                className="color-[#D87D4A]"
                 height={24}
                 width={24}
                 src={"/assets/shared/desktop/icon-facebook.svg"}

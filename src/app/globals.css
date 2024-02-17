@@ -100,7 +100,7 @@ button {
     max-width: 1110px;
   }
 
-  .overline {
+  .text-overline {
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -133,6 +133,16 @@ button {
     letter-spacing: 2px;
     text-transform: uppercase;
   }
+
+  .category-link {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
   @media (max-width: 1110px) {
     .container {
       padding-inline: 40px;

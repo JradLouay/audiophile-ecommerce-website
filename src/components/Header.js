@@ -14,10 +14,18 @@ function Header() {
           />
 
           <div className="hidden lg:flex justify-center gap-[34px] link text-white">
-            <Link href={""}>HOME</Link>
-            <Link href={""}>HEADPHONES</Link>
-            <Link href={""}>SPEAKERS</Link>
-            <Link href={""}>EARPHONES</Link>
+            <Link className="hover:text-[#D87D4A]" href={""}>
+              HOME
+            </Link>
+            <Link className="hover:text-[#D87D4A]" href={""}>
+              HEADPHONES
+            </Link>
+            <Link className="hover:text-[#D87D4A]" href={""}>
+              SPEAKERS
+            </Link>
+            <Link className="hover:text-[#D87D4A]" href={""}>
+              EARPHONES
+            </Link>
           </div>
           <Image
             height={23}
