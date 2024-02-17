@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="bg-stone-950">
       <div className="container pb-[38px] md:pb-[46px] lg:pb-12">
-        <div className="w-[101px] h-1 bg-[#D87D4A]" />
+        <div className="w-[101px] h-1 bg-[#D87D4A] m-auto md:m-0" />
         <div className="flex items-center md:items-start justify-between bg-stone-950 mt-12 md:mt-[56px] lg:mt-[71px] mb-12 md:mb-9 flex-col gap-y-12 md:gap-y-8 lg:flex-row">
           <Image
             width={143}
