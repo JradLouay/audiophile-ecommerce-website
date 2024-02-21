@@ -97,7 +97,8 @@ button {
 @layer utilities {
   .container {
     margin: 0 auto;
-    max-width: 1110px;
+    max-width: 1190px;
+    padding-inline: 40px;
   }
 
   .text-overline {
@@ -143,14 +144,22 @@ button {
     text-transform: uppercase;
   }
 
-  @media (max-width: 1110px) {
-    .container {
-      padding-inline: 40px;
-    }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: minmax(min-content, 445px) minmax(min-content, 635px);
+    grid-template-rows: 280px 280px;
+    gap: 30px;
   }
+
   @media (max-width: 768px) {
     .container {
       padding-inline: 24px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: unset;
+      grid-template-rows: min-content;
+      gap: 30px;
     }
   }
 }
