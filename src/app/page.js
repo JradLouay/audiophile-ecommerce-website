@@ -1,4 +1,4 @@
-import AdSection from "@/components/home/AdSection";
+import AdSection from "@/components/AdSection";
 import HeroSection from "@/components/home/HeroSection";
 import ProductHighlight from "@/components/home/ProductHighlight";
 import Image from "next/image";

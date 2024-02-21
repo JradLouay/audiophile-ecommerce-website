@@ -34,7 +34,6 @@ function Header() {
             alt="cart logo"
           />
         </div>
-        <div className="h-px w-full bg-white"></div>
       </div>
     </header>
   );

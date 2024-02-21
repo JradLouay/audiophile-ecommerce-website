@@ -2,8 +2,8 @@ import Image from "next/image";
 
 function AdSection() {
   return (
-    <section className="container ">
-      <div className="mb-[200px] grid lg:grid-cols-2 gap-10 md:gap-[63px]">
+    <section className="container">
+      <div className="grid lg:grid-cols-2 gap-10 md:gap-[63px]">
         <div className="relative h-[588px] lg:col-start-2">
           <Image
             className="rounded-lg"

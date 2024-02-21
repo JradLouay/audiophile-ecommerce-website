@@ -2,6 +2,8 @@ function HeroSection() {
   return (
     <section className="bg-stone-950">
       <div className="container flex gap-12 pt-32 pb-[158px]">
+        <div className="h-px w-full bg-white"></div>
+
         <div className="flex flex-col gap-10">
           <div className="max-w-[396px] flex flex-col gap-6">
             <p className="opacity-50 text-white text-overline">NEW PRODUCT</p>
