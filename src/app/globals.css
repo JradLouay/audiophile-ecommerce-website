@@ -94,6 +94,32 @@ button {
   text-transform: uppercase;
 }
 
+input {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.25px;
+  padding: 18px 24px 19px 24px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+}
+
+input:active {
+  border: 1px solid #d87d4a;
+}
+input:hover {
+  border: 1px solid #d87d4a;
+}
+
+.label {
+  font-size: 12px !important;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.214px;
+}
+
 @layer utilities {
   .container {
     margin: 0 auto;
