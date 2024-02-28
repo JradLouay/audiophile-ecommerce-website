@@ -1,50 +1,54 @@
 import Image from "next/image";
+import Link from "next/link";
 
-function ProductItem({ inverse }) {
+function ProductItem({ data, inverse }) {
+  console.log(data);
+  const link = `/${data.category}/${data.slug}`;
   return (
-    <div className="grid place-items-center lg:grid-cols-2 gap-6 sm:gap-[52px] lg:gap-[30px]">
+    <div className="grid place-items-center gap-6 sm:gap-[52px] lg:grid-cols-2 lg:gap-[30px]">
       {" "}
       <div className={`${inverse && "lg:col-start-2"}`}>
         <Image
-          className={`rounded-lg lg:block hidden`}
-          src="/assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg"
+          className={`hidden rounded-lg lg:block`}
+          src={data.categoryImage.desktop}
           height={560}
           width={540}
           alt="produt"
         />
         <Image
           className={`rounded-lg lg:hidden`}
-          src="/assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg"
+          src={data.categoryImage.tablet}
           height={352}
           width={689}
           alt="produt"
         />
       </div>
       <div
-        className={`rounded-lg flex items-center ${
+        className={`flex items-center rounded-lg ${
           inverse && `lg:col-start-1 lg:row-start-1`
         }`}
       >
         {" "}
         <div
-          className={`flex flex-col items-center lg:items-start gap-6 lg:gap-10 ${
+          className={`flex flex-col items-center gap-6 lg:items-start lg:gap-10 ${
             !inverse && "lg:ml-[95px]"
           }`}
         >
           <div className=" text-center lg:text-start">
-            <p className="opacity-50 text-[#D87D4A] text-overline mb-6 lg:mb-4">
-              NEW PRODUCT
-            </p>
-            <h2 className="text-black mb-6 lg:mb-8">XX99 Mark II Headphones</h2>
-            <p className="opacity-50 text-black body">
-              The new XX99 Mark II headphones is the pinnacle of pristine audio.
-              It redefines your premium headphone experience by reproducing the
-              balanced depth and precision of studio-quality sound.
-            </p>
+            {data.newProduct && (
+              <p className="text-overline mb-6 text-[#D87D4A] opacity-50 lg:mb-4">
+                NEW PRODUCT
+              </p>
+            )}
+            <h2 className="mb-6 text-black lg:mb-8">{data.name}</h2>
+            <p className="body text-black opacity-50">{data.description}</p>
           </div>
-          <button className="w-40 h-12 bg-[#D87D4A] subtitle text-white">
+          <Link
+            className="subtitle flex h-12 w-40 items-center justify-center bg-[#D87D4A] text-white"
+            href={link}
+          >
             See Product
-          </button>
+          </Link>
         </div>
       </div>
     </div>

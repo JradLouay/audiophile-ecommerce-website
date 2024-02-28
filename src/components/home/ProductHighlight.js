@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function ProductHighlight() {
   return (
@@ -26,10 +27,13 @@ function ProductHighlight() {
         </figure>
         <div className="flex h-[200px] flex-col justify-center rounded-lg bg-zinc-100 pl-[25.5px] md:h-[320px] md:pl-[42.5px] lg:pl-[95px]">
           <div className="flex flex-col justify-center gap-8 text-black">
-            <h4>ZX7 SPEAKER</h4>
-            <button className="h-12 w-40 border border-black ">
+            <h4>YX1 EARPHONES</h4>
+            <Link
+              className="link flex h-12 w-40 items-center justify-center border border-black "
+              href="/speakers/yx1-earphones"
+            >
               See Product
-            </button>
+            </Link>
           </div>
         </div>
       </div>

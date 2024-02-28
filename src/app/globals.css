@@ -94,6 +94,15 @@ button {
   text-transform: uppercase;
 }
 
+.link {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 input {
   font-size: 14px;
   font-style: normal;
@@ -184,8 +193,8 @@ input:hover {
     .gallery-grid {
       display: grid;
       grid-template-columns: unset;
-      grid-template-rows: min-content;
-      gap: 30px;
+      grid-template-rows: 174px 174px 378px;
+      gap: 20px;
     }
   }
 }

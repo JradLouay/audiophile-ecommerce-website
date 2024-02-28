@@ -25,16 +25,16 @@ function Header() {
         </div>
 
         <div className="link hidden justify-center gap-[34px] text-white lg:flex">
-          <Link className="hover:text-[#D87D4A]" href={""}>
+          <Link href="/" className="hover:text-[#D87D4A]">
             HOME
           </Link>
-          <Link className="hover:text-[#D87D4A]" href={""}>
+          <Link href="/headphones" className="hover:text-[#D87D4A]">
             HEADPHONES
           </Link>
-          <Link className="hover:text-[#D87D4A]" href={""}>
+          <Link href="/speakers" className="hover:text-[#D87D4A]">
             SPEAKERS
           </Link>
-          <Link className="hover:text-[#D87D4A]" href={""}>
+          <Link href="/earphones" className="hover:text-[#D87D4A]">
             EARPHONES
           </Link>
         </div>

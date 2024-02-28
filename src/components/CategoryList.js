@@ -5,8 +5,10 @@ function CategoryList() {
     <div className="mb-[168px] mt-[120px] grid gap-[68px] md:grid-cols-3 lg:gap-[30px]">
       {/* start */}
       <div className="relative flex h-[165px] flex-col-reverse items-center gap-[15px] rounded-lg bg-zinc-100 pb-[30px] lg:h-[204px]">
-        <div className="flex items-center justify-center gap-[13.32px]">
-          <p className="category-link text-black opacity-50">Shop</p>
+        <button className="group flex items-center justify-center gap-[13.32px] hover:text-[#D87D4A]">
+          <p className="category-link text-black opacity-50 group-hover:text-[#D87D4A] group-hover:opacity-100">
+            Shop
+          </p>
           <svg
             width="7"
             height="12"
@@ -20,7 +22,7 @@ function CategoryList() {
               stroke-width="2"
             />
           </svg>
-        </div>
+        </button>
         <p className="text-center font-bold tracking-wider text-black">
           HEADPHONES
         </p>

@@ -1,18 +1,21 @@
 import ProductItem from "@/components/category/ProductItem";
+import { getDataByCategory } from "../utility";
 
-function CategoryPage() {
+function CategoryPage({ params }) {
+  const { category } = params;
+  const data = getDataByCategory(category);
   return (
     <>
       <div className="bg-stone-950">
-        <div className="container flex pt-[105px] pb-[97px] justify-center">
-          <h2 className="text-white">headphones</h2>
+        <div className="container flex justify-center pb-[97px] pt-[105px]">
+          <h2 className="text-white">{category}</h2>
         </div>
       </div>
       <div className="container">
-        <div className="mt-16 md:mt-40 mb-[167.5px] grid place-items-center gap-y-[120px] lg:gap-y-[160px]">
-          <ProductItem inverse={false} />
-          <ProductItem inverse={true} />
-          <ProductItem inverse={false} />
+        <div className="mb-[167.5px] mt-16 grid place-items-center gap-y-[120px] md:mt-40 lg:gap-y-[160px]">
+          {data.map((item, index) => (
+            <ProductItem key={item.slug} data={item} inverse={index % 2} />
+          ))}
         </div>
       </div>
     </>

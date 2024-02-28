@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function ProductHighlight2() {
   return (
@@ -14,9 +15,12 @@ function ProductHighlight2() {
         ></Image>
         <div className="inline-flex flex-col items-start justify-center gap-8 pr-0.5 text-black">
           <h4>ZX7 SPEAKER</h4>
-          <button className="h-12 w-40 border border-black ">
+          <Link
+            className="link flex h-12 w-40 items-center justify-center border border-black"
+            href="/speakers/zx7-speaker"
+          >
             See Product
-          </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function HeroSection() {
   return (
@@ -16,9 +17,9 @@ function HeroSection() {
               made for the passionate music enthusiast.
             </p>
           </div>
-          <button className="subtitle h-12 w-40 bg-[#D87D4A] text-white">
+          <Link href="/headphones/xx99-mark-two-headphones" className="subtitle flex h-12 w-40 items-center justify-center bg-[#D87D4A] text-white">
             See Product
-          </button>
+          </Link>
         </div>
         {/* <Image
           src={"/assets/home/desktop/image-hero.jpg"}
