@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 function ProductItem({ data, inverse }) {
-  console.log(data);
   const link = `/${data.category}/${data.slug}`;
+
   return (
     <div className="grid place-items-center gap-6 sm:gap-[52px] lg:grid-cols-2 lg:gap-[30px]">
       {" "}

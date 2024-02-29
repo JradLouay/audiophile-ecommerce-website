@@ -1,13 +1,11 @@
 import Image from "next/image";
-function Gallery() {
+function Gallery({ gallery }) {
   return (
     <div className="gallery-grid container">
       <div className="relative">
         <Image
           className="rounded-lg"
-          src={
-            "/assets/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg"
-          }
+          src={gallery.first.desktop}
           fill
           alt="image-gallery-1.jpg"
         />
@@ -15,9 +13,7 @@ function Gallery() {
       <div className="relative md:row-start-2">
         <Image
           className="rounded-lg"
-          src={
-            "/assets/product-xx99-mark-one-headphones/desktop/image-gallery-2.jpg"
-          }
+          src={gallery.second.desktop}
           fill
           alt="image-gallery-2.jpg"
         />
@@ -25,9 +21,7 @@ function Gallery() {
       <div className="relative md:col-start-2 md:row-span-2">
         <Image
           className="rounded-lg"
-          src={
-            "/assets/product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg"
-          }
+          src={gallery.third.desktop}
           fill
           alt="image-gallery-1.jpg"
         />

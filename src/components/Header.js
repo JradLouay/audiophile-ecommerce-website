@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CartMenu from "./CartMenu";
 import NavBarMenu from "./NavBarMenu";
+import NavLinks from "./NavLinks";
 
 function Header() {
   return (
@@ -23,20 +24,8 @@ function Header() {
             alt="site logo"
           />
         </div>
-
         <div className="link hidden justify-center gap-[34px] text-white lg:flex">
-          <Link href="/" className="hover:text-[#D87D4A]">
-            HOME
-          </Link>
-          <Link href="/headphones" className="hover:text-[#D87D4A]">
-            HEADPHONES
-          </Link>
-          <Link href="/speakers" className="hover:text-[#D87D4A]">
-            SPEAKERS
-          </Link>
-          <Link href="/earphones" className="hover:text-[#D87D4A]">
-            EARPHONES
-          </Link>
+          <NavLinks />
         </div>
         <CartMenu>
           <Image

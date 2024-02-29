@@ -1,11 +1,13 @@
 import ProductItem from "@/components/category/ProductItem";
 import { getDataByCategory } from "../utility";
+import CategoryList from "@/components/CategoryList";
+import AdSection from "@/components/AdSection";
 
 function CategoryPage({ params }) {
   const { category } = params;
   const data = getDataByCategory(category);
   return (
-    <>
+    <div className="pb-[120px] lg:pb-[160px]">
       <div className="bg-stone-950">
         <div className="container flex justify-center pb-[97px] pt-[105px]">
           <h2 className="text-white">{category}</h2>
@@ -18,7 +20,11 @@ function CategoryPage({ params }) {
           ))}
         </div>
       </div>
-    </>
+      <div className="container">
+        <CategoryList />
+      </div>
+      <AdSection />
+    </div>
   );
 }
 

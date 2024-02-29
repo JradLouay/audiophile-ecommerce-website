@@ -13,7 +13,7 @@ function ProductDetailPage({ params }) {
     <div className="flex flex-col gap-[88px] pb-40 pt-20 md:gap-40">
       <ItemOverview data={data} />
       <ItemInfo features={data.features} includes={data.includes} />
-      <Gallery />
+      <Gallery gallery={data.gallery} />
       <Suggestions suggestions={data.others} />
       <AdSection />
     </div>

@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import CartItem from "./CartItem";
@@ -32,7 +33,7 @@ function CartMenu({ children }) {
             <div className="fixed inset-0 bg-black opacity-40" />
           </Transition.Child>
 
-          <div className="fixed inset-0 overflow-y-auto">
+          <div className="fixed inset-0 overflow-y-auto pb-8">
             <div className="container flex min-h-full flex-row-reverse items-start text-center">
               <Transition.Child
                 as={Fragment}
@@ -57,12 +58,12 @@ function CartMenu({ children }) {
                     <p className="body opacity-50">TOTAL</p>
                     <h6 className="text-right">$ 5,446</h6>
                   </div>
-                  <button
-                    onClick={openModal}
-                    className="mt-6 w-full bg-[#D87D4A] pb-[15px] pt-[15px] text-white"
+                  <Link
+                    href="/checkout"
+                    className="mt-6 flex w-full items-center justify-center bg-[#D87D4A] pb-[15px] pt-[15px] text-white"
                   >
                     CHECKOUT
-                  </button>
+                  </Link>
                 </Dialog.Panel>
               </Transition.Child>
             </div>
