@@ -1,9 +1,11 @@
 "use client";
-import { Fragment, useState } from "react";
 import Image from "next/image";
+import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import { useFormContext } from "react-hook-form";
 
 function Summary() {
+  const { register } = useFormContext();
   let [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
@@ -68,7 +70,8 @@ function Summary() {
           <h6 className="text-right text-[#D87D4A]">$ 5,446</h6>
         </div>
         <button
-          onClick={openModal}
+          // onClick={openModal}
+          type="submit"
           className="mt-8 w-full bg-[#D87D4A] pb-[15px] pt-[15px] text-white"
         >
           CONTINUE & PAY

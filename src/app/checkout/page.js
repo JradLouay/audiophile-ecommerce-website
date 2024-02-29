@@ -1,6 +1,5 @@
 import Link from "next/link";
-import CheckoutForm from "@/components/checkout/CheckoutForm";
-import Summary from "@/components/checkout/Summary";
+import FormComponent from "@/components/checkout/FormComponent";
 
 function CheckoutPage() {
   return (
@@ -11,10 +10,7 @@ function CheckoutPage() {
             Go back
           </Link>
         </div>
-        <div className="grid grid-cols-2 gap-[30px] lg:grid-cols-3">
-          <CheckoutForm />
-          <Summary />
-        </div>
+        <FormComponent />
       </div>
     </div>
   );
