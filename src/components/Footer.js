@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import NavLinks from "./NavLinks";
+import SocialMediaButtonsGroup from "./SocialMediaButtonsGroup";
 
 function Footer() {
   return (
@@ -34,27 +35,7 @@ function Footer() {
             </p>
           </div>
           <div className="flex justify-center md:col-start-2 md:items-end md:justify-end lg:pb-[7px]">
-            <div className="flex gap-4">
-              <Image
-                className="color-[#D87D4A]"
-                height={24}
-                width={24}
-                src={"/assets/shared/desktop/icon-facebook.svg"}
-                alt="facebook icon"
-              />
-              <Image
-                height={24}
-                width={24}
-                src={"/assets/shared/desktop/icon-twitter.svg"}
-                alt="twitter icon"
-              />
-              <Image
-                height={24}
-                width={24}
-                src={"/assets/shared/desktop/icon-instagram.svg"}
-                alt="instagram icon"
-              />
-            </div>
+            <SocialMediaButtonsGroup />
           </div>
         </div>
       </div>

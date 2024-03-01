@@ -1,5 +1,6 @@
 import Link from "next/link";
 import FormComponent from "@/components/checkout/FormComponent";
+import Summary from "@/components/checkout/Summary";
 
 function CheckoutPage() {
   return (
@@ -10,7 +11,9 @@ function CheckoutPage() {
             Go back
           </Link>
         </div>
-        <FormComponent />
+        <FormComponent>
+          <Summary />
+        </FormComponent>
       </div>
     </div>
   );

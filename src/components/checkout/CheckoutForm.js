@@ -1,13 +1,14 @@
 "use client";
 import { useFormContext } from "react-hook-form";
+import Image from "next/image";
 
 function CheckoutForm() {
   const {
     register,
-    handleSubmit,
     watch,
     formState: { errors },
   } = useFormContext();
+  const paymentMethod = watch("paymentMethod");
 
   return (
     <div className="col-span-2 rounded-lg bg-white pb-12 pl-12 pr-12 pt-[54px]">
@@ -74,10 +75,15 @@ function CheckoutForm() {
       </div>
       <p className="subtitle text-[#D87D4A]">shipping info</p>
       <div className="mb-[53px] mt-4 grid gap-x-4 gap-y-6 md:grid-cols-2">
-        <div className="flex flex-col gap-[9px] md:col-span-2">
+        <div className="relative flex flex-col gap-[9px] md:col-span-2">
           <label htmlFor="address" className="label">
             Address
           </label>
+          {errors.address && (
+            <span className="label absolute right-0 top-0 text-[#CD2C2C]">
+              Address is required
+            </span>
+          )}
           <input
             className={`${errors.address && "border-2 border-red-600"}`}
             {...register("address", { required: true })}
@@ -85,10 +91,15 @@ function CheckoutForm() {
             placeholder="1137 Williams Avenue"
           />
         </div>
-        <div className="flex flex-col gap-[9px]">
+        <div className="relative flex flex-col gap-[9px]">
           <label htmlFor="zip" className="label">
             ZIP Code
           </label>
+          {errors.zipCode && (
+            <span className="label absolute right-0 top-0 text-[#CD2C2C]">
+              ZIP Code is required
+            </span>
+          )}
           <input
             className={`${errors.zipCode && "border-2 border-red-600"}`}
             {...register("zipCode", { required: true })}
@@ -96,10 +107,15 @@ function CheckoutForm() {
             placeholder="10001"
           />
         </div>
-        <div className="flex flex-col gap-[9px]">
+        <div className="relative flex flex-col gap-[9px]">
           <label htmlFor="city" className="label">
             City
           </label>
+          {errors.city && (
+            <span className="label absolute right-0 top-0 text-[#CD2C2C]">
+              City is required
+            </span>
+          )}
           <input
             className={`${errors.city && "border-2 border-red-600"}`}
             {...register("city", { required: true })}
@@ -107,10 +123,15 @@ function CheckoutForm() {
             placeholder="New york"
           />
         </div>
-        <div className="flex flex-col gap-[9px]">
+        <div className="relative flex flex-col gap-[9px]">
           <label htmlFor="country" className="label">
             Country
           </label>
+          {errors.country && (
+            <span className="label absolute right-0 top-0 text-[#CD2C2C]">
+              Country is required
+            </span>
+          )}
           <input
             className={`${errors.country && "border-2 border-red-600"}`}
             {...register("country", { required: true })}
@@ -122,54 +143,82 @@ function CheckoutForm() {
       <p className="subtitle text-[#D87D4A]">payment details</p>
       <div className="mb-[53px] mt-4 grid gap-x-4 gap-y-6 md:grid-cols-2">
         <label className="label md:row-span-2">Payment Method</label>
-        {/* <fieldset> */}
         <label
-          className={`flex gap-4 rounded-lg border border-stone-300 pb-[18px] pl-4 pr-4 pt-[18px] ${false && "border-2 border-red-600"}`}
+          className={`flex cursor-pointer gap-4 rounded-lg border border-stone-300 pb-[18px] pl-4 pr-4 pt-[18px] hover:border hover:border-[#D87D4A] ${paymentMethod == "emoney" && "!border-[#D87D4A]"}`}
           htmlFor="emoney"
         >
           <input
             type="radio"
             id="emoney"
-            name="payment-method"
             value="emoney"
+            {...register("paymentMethod")}
           />
           <span className="label">e-Money</span>
         </label>
         <label
           htmlFor="cashondelivery"
-          className="flex gap-4 rounded-lg border border-stone-300 pb-[18px] pl-4 pr-4 pt-[18px]"
+          className={`flex cursor-pointer gap-4 rounded-lg border border-stone-300 pb-[18px] pl-4 pr-4 pt-[18px] hover:border hover:border-[#D87D4A] ${paymentMethod == "cash" && "!border-[#D87D4A]"}`}
         >
           <input
             type="radio"
             id="cashondelivery"
-            name="payment-method"
             value="cash"
+            {...register("paymentMethod")}
           />
           <span className="label">Cash on delivery</span>
         </label>
-        {/* </fieldset> */}
-        <div className="flex flex-col gap-[9px]">
-          <label htmlFor="emoney-number" className="label">
-            e-Money Number
-          </label>
-          <input
-            className={`${errors.emoneyNumber && "border-2 border-red-600"}`}
-            {...register("emoneyNumber")}
-            id="emoney-number"
-            placeholder="238521993"
-          />
-        </div>
-        <div className="flex flex-col gap-[9px]">
-          <label htmlFor="emoney-pin" className="label">
-            e-Money PIN
-          </label>
-          <input
-            className={`${errors.emoneyPin && "border-2 border-red-600"}`}
-            {...register("emoneyPin")}
-            id="emoney-pin"
-            placeholder="238521993"
-          />
-        </div>
+        {paymentMethod == "cash" && (
+          <div className="flex items-center gap-6 md:col-span-2">
+            <Image
+              height={48}
+              width={48}
+              src="/assets/checkout/icon-cash-on-delivery.svg"
+              alt="icon-cash-on-delivery"
+            />
+            <p className="body text-black opacity-50">
+              The ‘Cash on Delivery’ option enables you to pay in cash when our
+              delivery courier arrives at your residence. Just make sure your
+              address is correct so that your order will not be cancelled.
+            </p>
+          </div>
+        )}
+        {paymentMethod === "emoney" && (
+          <>
+            {" "}
+            <div className="relative flex flex-col gap-[9px]">
+              <label htmlFor="emoney-number" className="label">
+                e-Money Number
+              </label>
+              {errors.emoneyNumber && (
+                <span className="label absolute right-0 top-0 text-[#CD2C2C]">
+                  Country is required
+                </span>
+              )}
+              <input
+                className={`${errors.emoneyNumber && "border-2 border-red-600"}`}
+                {...register("emoneyNumber", { required: true })}
+                id="emoney-number"
+                placeholder="238521993"
+              />
+            </div>
+            <div className="relative flex flex-col gap-[9px]">
+              <label htmlFor="emoney-pin" className="label">
+                e-Money PIN
+              </label>
+              {errors.emoneyPin && (
+                <span className="label absolute right-0 top-0 text-[#CD2C2C]">
+                  Country is required
+                </span>
+              )}
+              <input
+                className={`${errors.emoneyPin && "border-2 border-red-600"}`}
+                {...register("emoneyPin", { required: true })}
+                id="emoney-pin"
+                placeholder="238521993"
+              />
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
