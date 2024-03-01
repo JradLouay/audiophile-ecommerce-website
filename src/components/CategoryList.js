@@ -6,7 +6,7 @@ function CategoryList() {
       {/* start */}
       <div className="group relative flex h-[165px] cursor-pointer flex-col-reverse items-center gap-[15px] rounded-lg bg-zinc-100 pb-[30px] md:h-[204px] lg:h-[204px]">
         <img
-          className="absolute -top-[51px] w-[140px] md:w-[181px]"
+          className="absolute -top-[54px] max-w-[152px] md:-top-[98px] md:max-w-[250px]"
           src="/assets/shared/desktop/image-category-thumbnail-headphones.png"
           alt=""
         />
@@ -37,7 +37,7 @@ function CategoryList() {
       </div>
       <div className="group relative flex h-[165px] cursor-pointer flex-col-reverse items-center gap-[15px] rounded-lg bg-zinc-100 pb-[30px] md:h-[204px] lg:h-[204px]">
         <img
-          className="absolute -top-[51px] w-[140px] md:w-[181px]"
+          className="absolute -top-[54px] max-w-[152px] md:-top-[86px] md:max-w-[250px]"
           src="/assets/shared/desktop/image-category-thumbnail-speakers.png"
           alt=""
         />
@@ -68,7 +68,7 @@ function CategoryList() {
       </div>
       <div className="group relative flex h-[165px] cursor-pointer flex-col-reverse items-center gap-[15px] rounded-lg bg-zinc-100 pb-[30px] md:h-[204px] lg:h-[204px]">
         <img
-          className="absolute -top-[51px] w-[140px] md:w-[181px]"
+          className="absolute -top-[43px] max-w-[152px] md:-top-[72px] md:max-w-[250px]"
           src="/assets/shared/desktop/image-category-thumbnail-earphones.png"
           alt=""
         />
