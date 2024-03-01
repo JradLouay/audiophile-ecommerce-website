@@ -8,8 +8,11 @@ import ProductHighlight2 from "@/components/home/ProductHighlight2";
 import ProductPreview from "@/components/ProductPreview";
 export default function Home() {
   return (
-    <main className="pb-[120px] md:pb-[96px] lg:pb-[200px]">
+    <div className="pb-[120px] md:pb-[96px] lg:pb-[200px]">
+      {/* <section className="hero-section"> */}
       <HeroSection />
+      {/* </section> */}
+
       <section className="container">
         <CategoryList />
       </section>
@@ -17,6 +20,6 @@ export default function Home() {
       <ProductHighlight2 />
       <ProductHighlight />
       <AdSection />
-    </main>
+    </div>
   );
 }

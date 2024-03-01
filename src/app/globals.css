@@ -150,6 +150,11 @@ input:hover :not([type="radio"]) {
   letter-spacing: -0.214px;
 }
 
+.hero-image {
+  background: url(/assets/home/desktop/image-hero.jpg) no-repeat center center /
+    cover;
+}
+
 @layer utilities {
   .container {
     margin: 0 auto;

@@ -2,9 +2,14 @@ import Link from "next/link";
 
 function CategoryList() {
   return (
-    <div className="mb-[168px] mt-[120px] grid gap-[68px] md:grid-cols-3 lg:gap-[30px]">
+    <div className="mb-[168px] mt-[120px] grid gap-[68px] md:mt-[200px] md:grid-cols-3 lg:gap-[30px]">
       {/* start */}
-      <div className="group relative flex h-[165px] cursor-pointer flex-col-reverse items-center gap-[15px] rounded-lg bg-zinc-100 pb-[30px] lg:h-[204px]">
+      <div className="group relative flex h-[165px] cursor-pointer flex-col-reverse items-center gap-[15px] rounded-lg bg-zinc-100 pb-[30px] md:h-[204px] lg:h-[204px]">
+        <img
+          className="absolute -top-[51px] w-[140px] md:w-[181px]"
+          src="/assets/shared/desktop/image-category-thumbnail-headphones.png"
+          alt=""
+        />
         <Link
           href={"/headphones"}
           className="flex items-center justify-center gap-[13.32px] hover:text-[#D87D4A]"
@@ -30,7 +35,12 @@ function CategoryList() {
           HEADPHONES
         </p>
       </div>
-      <div className="group flex h-[165px] cursor-pointer flex-col-reverse items-center gap-[15px] rounded-lg bg-zinc-100 pb-[30px] lg:h-[204px]">
+      <div className="group relative flex h-[165px] cursor-pointer flex-col-reverse items-center gap-[15px] rounded-lg bg-zinc-100 pb-[30px] md:h-[204px] lg:h-[204px]">
+        <img
+          className="absolute -top-[51px] w-[140px] md:w-[181px]"
+          src="/assets/shared/desktop/image-category-thumbnail-speakers.png"
+          alt=""
+        />
         <Link
           href={"/speakers"}
           className="flex items-center justify-center gap-[13.32px] hover:text-[#D87D4A]"
@@ -56,7 +66,12 @@ function CategoryList() {
           SPEAKERS
         </p>
       </div>
-      <div className="group flex h-[165px] cursor-pointer flex-col-reverse items-center gap-[15px] rounded-lg bg-zinc-100 pb-[30px] lg:h-[204px]">
+      <div className="group relative flex h-[165px] cursor-pointer flex-col-reverse items-center gap-[15px] rounded-lg bg-zinc-100 pb-[30px] md:h-[204px] lg:h-[204px]">
+        <img
+          className="absolute -top-[51px] w-[140px] md:w-[181px]"
+          src="/assets/shared/desktop/image-category-thumbnail-earphones.png"
+          alt=""
+        />
         <Link
           href={"/earphones"}
           className="flex items-center justify-center gap-[13.32px] hover:text-[#D87D4A]"

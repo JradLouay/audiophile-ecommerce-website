@@ -17,16 +17,13 @@ function HeroSection() {
               made for the passionate music enthusiast.
             </p>
           </div>
-          <Link href="/headphones/xx99-mark-two-headphones" className="subtitle flex h-12 w-40 items-center justify-center bg-[#D87D4A] text-white">
+          <Link
+            href="/headphones/xx99-mark-two-headphones"
+            className="subtitle flex h-12 w-40 items-center justify-center bg-[#D87D4A] text-white"
+          >
             See Product
           </Link>
         </div>
-        {/* <Image
-          src={"/assets/home/desktop/image-hero.jpg"}
-          width={708}
-          height={886}
-          alt="hero image"
-        /> */}
       </div>
     </section>
   );
