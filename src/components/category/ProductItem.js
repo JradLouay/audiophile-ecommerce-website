@@ -44,7 +44,7 @@ function ProductItem({ data, inverse }) {
             <p className="body text-black opacity-50">{data.description}</p>
           </div>
           <Link
-            className="subtitle flex h-12 w-40 items-center justify-center bg-[#D87D4A] text-white"
+            className="subtitle flex h-12 w-40 items-center justify-center bg-[#D87D4A] text-white hover:bg-[#FBAF85]"
             href={link}
           >
             See Product

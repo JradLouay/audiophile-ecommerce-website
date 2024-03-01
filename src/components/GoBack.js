@@ -1,12 +1,16 @@
-import Link from "next/link";
+"use client";
 
 function GoBack() {
+  function goBack() {
+    window.history.back();
+  }
   return (
-    <div className="pb-6 pt-[38px]">
-      <Link href={""} className="body opacity-50">
-        Go back
-      </Link>
-    </div>
+    <button
+      onClick={goBack}
+      className="body normal-case opacity-50 hover:text-[#D87D4A] hover:opacity-100"
+    >
+      Go back
+    </button>
   );
 }
 

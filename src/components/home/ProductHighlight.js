@@ -29,7 +29,7 @@ function ProductHighlight() {
           <div className="flex flex-col justify-center gap-8 text-black">
             <h4>YX1 EARPHONES</h4>
             <Link
-              className="link flex h-12 w-40 items-center justify-center border border-black "
+              className="link flex h-12 w-40 items-center justify-center border border-black hover:bg-[black] hover:text-white"
               href="/speakers/yx1-earphones"
             >
               See Product

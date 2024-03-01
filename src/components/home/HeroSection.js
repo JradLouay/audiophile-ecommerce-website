@@ -19,7 +19,7 @@ function HeroSection() {
           </div>
           <Link
             href="/headphones/xx99-mark-two-headphones"
-            className="subtitle flex h-12 w-40 items-center justify-center bg-[#D87D4A] text-white"
+            className="subtitle flex h-12 w-40 items-center justify-center bg-[#D87D4A] text-white hover:bg-[#FBAF85]"
           >
             See Product
           </Link>

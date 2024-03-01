@@ -81,7 +81,7 @@ function Summary() {
         </div>
         <button
           type="submit"
-          className="mt-8 w-full bg-[#D87D4A] pb-[15px] pt-[15px] text-white"
+          className="mt-8 w-full bg-[#D87D4A] pb-[15px] pt-[15px] text-white hover:bg-[#FBAF85]"
         >
           CONTINUE & PAY
         </button>

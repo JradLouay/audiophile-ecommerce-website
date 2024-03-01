@@ -36,7 +36,7 @@ function ProductPreview() {
           </p>
           <Link
             href={"/speakers/zx9-speaker"}
-            className="link flex h-12 w-40 items-center justify-center bg-black text-white"
+            className="link flex h-12 w-40 items-center justify-center bg-black text-white hover:bg-[#4C4C4C]"
           >
             See Product
           </Link>

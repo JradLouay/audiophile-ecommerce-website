@@ -60,7 +60,8 @@ function CartMenu({ children }) {
                   </div>
                   <Link
                     href="/checkout"
-                    className="mt-6 flex w-full items-center justify-center bg-[#D87D4A] pb-[15px] pt-[15px] text-white"
+                    onClick={closeModal}
+                    className="mt-6 flex w-full items-center justify-center bg-[#D87D4A] pb-[15px] pt-[15px] text-white hover:bg-[#FBAF85]"
                   >
                     CHECKOUT
                   </Link>

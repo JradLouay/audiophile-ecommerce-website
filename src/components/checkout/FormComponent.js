@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { Fragment, useState } from "react";
 
 import { Dialog, Transition } from "@headlessui/react";
@@ -10,14 +11,15 @@ import CheckoutForm from "@/components/checkout/CheckoutForm";
 
 function FormComponent({ children }) {
   const methods = useForm();
+  const router = useRouter();
   let [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
     setIsOpen(false);
+    router.push("/");
   }
 
   function onSubmit(data) {
-    console.log(data);
     setIsOpen(true);
   }
   return (
@@ -101,7 +103,7 @@ function FormComponent({ children }) {
                   </div>
                   <button
                     onClick={closeModal}
-                    className="mt-[46px] w-full bg-[#D87D4A] pb-[15px] pt-[15px] text-white"
+                    className="mt-[46px] w-full bg-[#D87D4A] pb-[15px] pt-[15px] text-white hover:bg-[#FBAF85]"
                   >
                     Back to home
                   </button>

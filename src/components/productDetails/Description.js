@@ -13,16 +13,16 @@ function Description({ newProduct, name, description, price }) {
       </div>
       <div className="flex gap-4">
         <div className="flex items-center gap-[20px] bg-zinc-100 pl-[15px] pr-[15px]">
-          <button className="subtitle h-[18px] text-center !leading-none text-black opacity-25 hover:text-[#D87D4A]">
+          <button className="subtitle h-[18px] text-center !leading-none text-black opacity-25 hover:text-[#D87D4A] hover:opacity-100">
             -
           </button>
           <span className="subtitle">1</span>
-          <button className="subtitle h-[18px] text-center !leading-none text-black opacity-25 hover:text-[#D87D4A]">
+          <button className="subtitle h-[18px] text-center !leading-none text-black opacity-25 hover:text-[#D87D4A] hover:opacity-100">
             +
           </button>
         </div>
-        <button className="subtitle h-12 w-40 bg-[#D87D4A] text-white">
-          Add Product
+        <button className="subtitle h-12 w-40 bg-[#D87D4A] text-white hover:bg-[#FBAF85]">
+          add to cart
         </button>
       </div>
     </div>

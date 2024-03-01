@@ -16,7 +16,7 @@ function SuggestionItem({ suggestion }) {
       <h5 className="mb-8 text-center text-black">{suggestion.name}</h5>
       <Link
         href={link}
-        className="subtitle flex h-12 w-40 items-center justify-center place-self-center bg-[#D87D4A] text-white"
+        className="subtitle flex h-12 w-40 items-center justify-center place-self-center bg-[#D87D4A] text-white hover:bg-[#FBAF85]"
       >
         See Product
       </Link>

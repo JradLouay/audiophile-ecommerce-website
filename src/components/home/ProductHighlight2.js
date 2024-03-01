@@ -16,7 +16,7 @@ function ProductHighlight2() {
         <div className="inline-flex flex-col items-start justify-center gap-8 pr-0.5 text-black">
           <h4>ZX7 SPEAKER</h4>
           <Link
-            className="link flex h-12 w-40 items-center justify-center border border-black"
+            className="link flex h-12 w-40 items-center justify-center border border-black hover:bg-[black] hover:text-white"
             href="/speakers/zx7-speaker"
           >
             See Product
