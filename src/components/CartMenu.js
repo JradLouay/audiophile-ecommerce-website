@@ -16,7 +16,7 @@ function CartMenu({ children }) {
   }
   return (
     <>
-      <button className="content-end" onClick={openModal}>
+      <button className="group content-end" onClick={openModal}>
         {children}
       </button>
       <Transition appear show={isOpen} as={Fragment}>
