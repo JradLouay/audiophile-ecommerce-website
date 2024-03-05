@@ -1,9 +1,11 @@
 "use client";
-import { Fragment, useState } from "react";
+import { usePathname } from "next/navigation";
+import { Fragment, useState, useEffect } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import CategoryList from "./CategoryList";
 
 function NavBarMenu({ children }) {
+  const pathname = usePathname();
   let [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
@@ -13,6 +15,11 @@ function NavBarMenu({ children }) {
   function openModal() {
     setIsOpen(true);
   }
+
+  useEffect(() => {
+    closeModal();
+  }, [pathname]);
+
   return (
     <>
       {" "}
