@@ -1,5 +1,5 @@
 import ProductItem from "@/components/category/ProductItem";
-import { getDataByCategory } from "../utility";
+import { getDataByCategory } from "../../utility";
 import CategoryList from "@/components/CategoryList";
 import AdSection from "@/components/AdSection";
 

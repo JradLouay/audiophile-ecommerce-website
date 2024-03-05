@@ -151,8 +151,9 @@ input:hover :not([type="radio"]) {
 }
 
 .hero-image {
-  background: url(/assets/home/desktop/image-hero.jpg) no-repeat center center /
-    cover;
+  background:
+    url(/assets/home/desktop/image-hero.jpg) no-repeat center center / cover,
+    #000;
 }
 
 @layer utilities {
@@ -225,7 +226,20 @@ input:hover :not([type="radio"]) {
   }
 }
 
+@media (max-width: 1024px) {
+  .hero-image {
+    background:
+      url(/assets/home/tablet/image-header.jpg) no-repeat center center / cover,
+      #000;
+  }
+}
+
 @media (max-width: 768px) {
+  .hero-image {
+    background:
+      url(/assets/home/mobile/image-header.jpg) no-repeat center center / cover,
+      #000;
+  }
   h1 {
     font-size: 36px;
     line-height: 40px; /* 111.111% */

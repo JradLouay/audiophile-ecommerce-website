@@ -3,9 +3,9 @@ import Link from "next/link";
 
 function HeroSection() {
   return (
-    <section className="bg-stone-950">
+    <div className="">
       <div className="container">
-        <div className="h-px w-full bg-white"></div>
+        <div className="h-px w-full bg-white opacity-20"></div>
       </div>
       <div className="container flex gap-12 pb-[158px] pt-32">
         <div className="flex flex-col gap-10">
@@ -25,7 +25,7 @@ function HeroSection() {
           </Link>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
